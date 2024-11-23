@@ -1,0 +1,30 @@
+Em alguns sistemas, pode ser necessário primeiro adicionar manualmente a chave do repositório para Cubic. (Normalmente isso não é necessário no Ubuntu).
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7579F80E494ED3406A59DF9081525E2B4F1283B
+
+Instale o Cubic usando os seguintes comandos.
+
+sudo apt-add-repository universo
+sudo apt-add-repository ppa:cubic-wizard/release
+atualização do sudo apt
+sudo apt install --no-install-recomenda cúbico
+
+
+Debian e Derivados
+
+Para Debian Bookworm (e mais recente):
+
+Instale o dpkg versão 1.21.22 usando os seguintes comandos.
+
+atualização do sudo apt
+sudo apt install --no-install-recomenda dpkg
+
+Instale o Cubic usando os seguintes comandos.
+
+echo "deb https://ppa.launchpadcontent.net/cubic-wizard/release/ubuntu/ noble main" | sudo tee /etc/apt/sources.list.d/cubic-wizard-release.list
+curl -S "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x081525e2b4f1283b" | sudo gpg --batch --yes --dearmor --output /etc/apt/trusted.gpg.d/cubic-wizard-ubuntu-release.gpg
+
+atualização do sudo apt
+sudo apt install --no-install-recomenda cúbico
+
+
